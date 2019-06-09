@@ -1,0 +1,46 @@
+Building Constructions Items
+
+#Header
+div
+a
+img
+
+nav
+ul
+4xli
+
+#Home
+h1
+hr
+search
+a
+img
+
+#Kategorie
+h2
+hr
+
+div
+ul
+6 x li 6 x a 6 x img
+
+#About
+h3
+hr
+img
+p
+
+#Git
+h4
+hr
+img
+a
+
+#Footer
+p
+
+
+
+
+id = # in Css
+class = . in css

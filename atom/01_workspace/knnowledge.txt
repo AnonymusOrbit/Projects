@@ -1,0 +1,62 @@
+
+#################################
+#						i3wm								#
+#################################
+
+FontAwesome: https://www.fontsquirrel.com/fonts/font-awesome
+
+San Francisco UI Dispplay Light: https://www.download-free-fonts.com/details/92723/sf-ui-display-light
+
+# set applications to startup
+$	exec_always firefox
+
+# set workspace variables
+$	set $workspace1 "1: logo /name"
+
+# switch to workspace
+$	bindsym $mod+1 workspace $workspace1
+
+# move focused container to workspace
+$	bindsym $mod+Shift+1 move container to workspace $workspace1
+
+
+# set application to workspace
+$	assign[class="ClassID"] $workspace1
+
+
+
+# i3 Colors
+$	set $border-color 		#74f016	//grün
+$	set $bg-color 			#465358 //grau
+$	set $text-color 		#ffffff //weiss
+$ 	set $inactive-text-color	#b2b2b2 //hellgrau
+$	set $inactive-bg-color 		#4c4c4c //dunkelgrau
+
+
+
+# setup i3bar
+$	bar {
+	       status_command i3blocks -c ~/.config/i3/i3blocks.conf
+         font pango: SF UI Display Light 15, FontAwesome 15
+         colors{
+            background #23292c
+            separator #FFFFFF
+#                              border             background         text
+            focused_workspace  #ffb400            #ffbb19          #181D25
+            inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+            urgent_workspace   #68d813            #74f016          #181D25
+         }
+
+
+#########################################
+#								i3Blocks								#
+#########################################
+
+[time]
+command=date '+%A | %d.%m.%Y | %H:%M:%S'
+interval=5
+
+[cpu_usage]
+label=
+interval=10
+separator=true
